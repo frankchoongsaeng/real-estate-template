@@ -51,11 +51,16 @@ const TopStories = () => {
           </div>
         </div>
 
-        <div className="w-72 sticky top-20 bg-red-600">
-          side
+        <div className="w-72 sticky top-14 ml-5 ">
+          <div className="rounded-none">
+            <img src="https://th.bing.com/th/id/R6456abb3a0a5adc3db8b51eccc465e37?rik=oYt5gScpeYMckA&riu=http%3a%2f%2fimages.dailyhive.com%2f20160919115313%2fReal-estate-in-Vancouver-Shutterstock.jpg&ehk=b1j%2btOwjQI62cmjh2v0rfXh1pFaSHc5BnpwPhXrvnL0%3d&risl=&pid=ImgRaw" />
+          </div>
+          <a className="link-with-hover-effect py-2 px-5 w-full block" href="/">View more stories</a>
         </div>
       </div>
-      <div className="h-screen bg-pink-800"></div>
+
+      <div className="h-screen ml-5 bg-red-500">
+      </div>
     </div>
   )
 }
