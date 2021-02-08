@@ -3,11 +3,9 @@
 const Hero = () => {
   return (
     <div className="cursor-default relative z-0 top-0 w-full h-screen bg-hero-image">
-      {/* <video className="w-full h-full absolute top-0 left-0 object-cover" loop autoplay muted poster="https://th.bing.com/th/id/R6456abb3a0a5adc3db8b51eccc465e37?rik=oYt5gScpeYMckA&riu=http%3a%2f%2fimages.dailyhive.com%2f20160919115313%2fReal-estate-in-Vancouver-Shutterstock.jpg&ehk=b1j%2btOwjQI62cmjh2v0rfXh1pFaSHc5BnpwPhXrvnL0%3d&risl=&pid=ImgRaw">
-        <source src="/videos/beautiful-luxury-homes-available-for-sale-in-ghana-accra-east-legon-trasacco.mp4" type="video/mp4" />
-      </video> */}
-
-      <div className="w-full h-full absolute top-0 left-0 bg-black opacity-70"></div>
+      <video className="w-full h-full absolute top-0 left-0 bg-black object-cover" autoPlay muted={true} loop poster="https://th.bing.com/th/id/R6456abb3a0a5adc3db8b51eccc465e37?rik=oYt5gScpeYMckA&riu=http%3a%2f%2fimages.dailyhive.com%2f20160919115313%2fReal-estate-in-Vancouver-Shutterstock.jpg&ehk=b1j%2btOwjQI62cmjh2v0rfXh1pFaSHc5BnpwPhXrvnL0%3d&risl=&pid=ImgRaw">
+        <source src="/videos/looping cloud background.mp4" type="video/mp4"/>
+      </video>
       <div className="max-w-screen-md mx-auto h-full relative z-10 flex flex-col justify-center items-center space-y-8 transform translate-y-12">
         <div className="text-white w-full border-b border-blue-200 border-dotted">
           <h1 className="text-5xl spacing tracking-tight">Discover your</h1>

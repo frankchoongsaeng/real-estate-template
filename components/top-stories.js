@@ -58,9 +58,6 @@ const TopStories = () => {
           <a className="link-with-hover-effect py-2 px-5 w-full block" href="/">View more stories</a>
         </div>
       </div>
-
-      <div className="h-screen ml-5 bg-red-500">
-      </div>
     </div>
   )
 }
