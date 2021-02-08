@@ -5,6 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Prata&display=swap');
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -55,4 +57,47 @@ a {
 
 .search-btn:hover svg {
   transform: rotate(-20deg);
+}
+
+.g-prime-custom-carousel-previous-btn, 
+.g-prime-custom-carousel-next-btn {
+  background: rgba(255,255,255, 0.5);
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  opacity: 0.5;
+}
+
+.g-prime-custom-carousel-previous-btn:hover, 
+.g-prime-custom-carousel-next-btn:hover,
+.g-prime-custom-carousel-previous-btn:focus, 
+.g-prime-custom-carousel-next-btn:focus {
+  outline: none;
+  border: 0;
+  opacity: 1;
+}
+
+.g-prime-custom-carousel-previous-btn {
+  left: 0;
+}
+
+.g-prime-custom-carousel-next-btn {
+  right: 0;
+}
+
+.g-prime-custom-carousel-wrapper {
+  @apply pr-1;
+  display: relative;
+  z-index: 0;
+}
+
+.g-prime-custom-carousel-wrapper .slide {
+  @apply  text-xl max-w-5xl w-full h-96 bg-blue-500 inline-block border-white opacity-20 transition-all;
+  transform: scale(0.95);
+}
+
+.g-prime-custom-carousel-wrapper .slide.g-prime-custom-carousel-slide-active {
+  @apply opacity-100 mx-1 transform scale-100;
 }
