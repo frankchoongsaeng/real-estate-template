@@ -36,10 +36,7 @@ export default function Home() {
               </div>
             </div>
           </div> */}
-          <Carousel
-            renderThumbs={[]}
-            renderArrowNext={}
-          >
+          <Carousel>
             <div className="max-w-5xl w-full h-96 bg-blue-500 inline-block" >
 
             </div>
