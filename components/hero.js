@@ -1,6 +1,6 @@
 // here's the link to the video on youtube http://youtube.com/watch?v=UTYGjBhMp0g
 
-const Hero = () => {
+const Hero = (props) => {
   return (
     <div className="cursor-default relative z-0 top-0 w-full h-screen bg-hero-image">
       <video className="bg-video w-full h-full absolute top-0 left-0 z-0 bg-black object-cover" autoPlay muted={true} loop poster="https://th.bing.com/th/id/R6456abb3a0a5adc3db8b51eccc465e37?rik=oYt5gScpeYMckA&riu=http%3a%2f%2fimages.dailyhive.com%2f20160919115313%2fReal-estate-in-Vancouver-Shutterstock.jpg&ehk=b1j%2btOwjQI62cmjh2v0rfXh1pFaSHc5BnpwPhXrvnL0%3d&risl=&pid=ImgRaw">

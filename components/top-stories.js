@@ -3,7 +3,7 @@ import SmallNewsCard from "./news-card-sm"
 const TopStories = () => {
   return (
     <div className="my-32 pt-5 space-y-6 border-t-2">
-      <h1 className="text-2xl">Top Stories</h1>
+      <h1 className="text-2xl">Top News</h1>
       <div className="flex items-start">
 
         <div className="flex-1 space-y-8" >

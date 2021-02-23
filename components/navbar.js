@@ -11,12 +11,16 @@ const NavBar = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
+    setScrollY(window.pageYOffset);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
   }, [])
 
   return (
-    <div className={` navbar w-full z-50 py-2 top-0 fixed ${scrollY < 200 ? 'bg-transparent' : 'bg-gray-800'} transition-all`}>
+    <div className={` navbar w-full z-50 py-2 top-0 fixed ${scrollY < 50 ? 'bg-transparent' : 'bg-gray-800'} transition-all`}>
       <div className="mx-auto max-w-screen-sm md:max-w-screen-xl flex justify-between items-center">
-        <h1 className={`bg-gray-800 ${scrollY < 200 ? 'text-4xl md:text-5xl mt-5' : 'text-xl md:text-2xl'} transition-all transform rotate-3 cursor-default text-blue-300 px-4`}>Logo</h1>
+        <h1 className={`bg-gray-800 ${scrollY < 50 ? 'text-4xl md:text-5xl mt-5' : 'text-xl md:text-2xl'} transition-all transform rotate-3 cursor-default text-blue-300 px-4`}>Logo</h1>
         <button className="w-8 text-white cursor-pointer px-1 mr-2 block md:hidden" >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />

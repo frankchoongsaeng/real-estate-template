@@ -17,7 +17,7 @@ const CustomCarousel = () => {
       return newValue;
     });
   }
-  
+
   const goPrevSlide = () => {
     setCurrentSlide(_oldVal => {
       let newValue = _oldVal - 1;
@@ -26,30 +26,38 @@ const CustomCarousel = () => {
       return newValue;
     });
   }
-  
+
   const checkAndReposition = () => {
     setCurrentSlide(_oldVal => {
       let newValue = _oldVal;
       // carouselWrapper.current.querySelector(".g-prime-custom-carousel-slide-active").classList.remove("g-prime-custom-carousel-slide-active");
-      
+      carouselWrapper.current.classList.remove("transition-transform");
+
       if (_oldVal === 1) {
-        newValue = carouselLength.current + 2;
+        console.log(carouselWrapper.current.children.length);
+        newValue = carouselWrapper.current.children.length - 3;
         carouselWrapper.current.classList.remove("transition-transform");
         carouselWrapper.current.style.transform = `translateX(${(-slideWidth.current * newValue) + ((carouselContainerWidth.current - slideWidth.current) / 2)}px)`;
-        setTimeout(() => {
-          carouselWrapper.current.classList.add("transition-transform");
-        }, 150)
+        carouselWrapper.current.classList.add("transition-transform");
+        // setTimeout(() => {
+        //   carouselWrapper.current.classList.add("transition-transform");
+        // }, 150)
       }
-      
+
       if (_oldVal === carouselLength.current + 2) {
         newValue = 2;
-        carouselWrapper.current.classList.remove("transition-transform");
+        // carouselWrapper.current.classList.remove("transition-transform");
         carouselWrapper.current.style.transform = `translateX(${(-slideWidth.current * newValue) + ((carouselContainerWidth.current - slideWidth.current) / 2)}px)`;
-        setTimeout(() => {
-          carouselWrapper.current.classList.add("transition-transform");
-        }, 150)
+        // carouselWrapper.current.classList.add("transition-transform");
+        // setTimeout(() => {
+        //   carouselWrapper.current.classList.add("transition-transform");
+        // }, 150)
       }
-      
+
+      // setTimeout(() => {
+      //   carouselWrapper.current.classList.add("transition-transform");
+      // }, 250)
+      // carouselWrapper.current.classList.add("transition-transform");
       carouselWrapper.current.children[newValue].classList.add("g-prime-custom-carousel-slide-active");
       return newValue;
     })
@@ -74,10 +82,10 @@ const CustomCarousel = () => {
   }, [])
 
   return (
-    <div ref={carousel} className="g-prime-custom-carousel w-full relative">
+    <div ref={carousel} className="g-prime-custom-carousel w-full relative ">
       <button onClick={goPrevSlide} className="g-prime-custom-carousel-previous-btn p-4">Prev</button>
       <button onClick={goNextSlide} className="g-prime-custom-carousel-next-btn p-4">Next</button>
-      <div ref={carouselWrapper} className="g-prime-custom-carousel-wrapper whitespace-nowrap transition-transform" onTransitionEnd={checkAndReposition}>
+      <div ref={carouselWrapper} className="g-prime-custom-carousel-wrapper" onTransitionEnd={checkAndReposition}>
         <div className="slide" >
           1
         </div>
